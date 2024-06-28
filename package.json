@@ -1,0 +1,41 @@
+{
+  "name": "arcgis-picture-layer",
+  "version": "1.0.0-beta5",
+  "description": "基于arcgis js api中BaseLayerView2D和GraphicsLayer扩展的图层，用于在二维地图MapView场景中显示图片。",
+  "keywords": [
+    "picture-layer",
+    "picture",
+    "layer",
+    "arcgis"
+  ],
+  "main": "dist/index.umd.js",
+  "module": "dist/index.esm.js",
+  "scripts": {
+    "build:umd": "webpack --env libraryType=umd --config webpack.config.js",
+    "build:esm": "webpack --env libraryType=esm --config webpack.config.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/travelclover/arcgis-picture-layer.git"
+  },
+  "author": "travelclover",
+  "license": "MIT",
+  "files": [
+    "/dist",
+    "index.d.ts"
+  ],
+  "types": "index.d.ts",
+  "bugs": {
+    "url": "https://github.com/travelclover/arcgis-picture-layer/issues"
+  },
+  "homepage": "https://github.com/travelclover/arcgis-picture-layer#readme",
+  "devDependencies": {
+    "@types/arcgis-js-api": "^4.28.0",
+    "cross-env": "^7.0.3",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.5.2",
+    "webpack": "^5.92.1",
+    "webpack-cli": "^5.1.4"
+  }
+}
