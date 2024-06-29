@@ -25,11 +25,12 @@ function setDependencies(dependencies: DependenciesProps) {
   ).createSubclass({
     attach() {
       const graphics = this.layer.graphics.items;
+      const imgUrlField = this.layer.imgUrlField || 'url';
       graphics.forEach((item: __esri.Graphic, index: number) => {
-        if (item.attributes?.url) {
+        if (item.attributes && item.attributes[imgUrlField]) {
           // 创建图片对象
           const img = new Image();
-          img.src = item.attributes?.url; // 图片的路径
+          img.src = item.attributes[imgUrlField]; // 图片的路径
 
           // 等待图片加载完成后再绘制
           img.onload = () => {
